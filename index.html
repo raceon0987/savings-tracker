@@ -315,7 +315,7 @@
 
       document.getElementById('total-income').textContent=fmt(income);
       document.getElementById('total-expense').textContent=fmt(expense);
-      document.getElementById('balance').textContent = fmt(income - expense)
+      document.getElementById('balance').textContent = Math.round(income - expense)
 
       const saved=Math.max(0,totalSaved());
       const target=data.target||0;
