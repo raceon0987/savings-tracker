@@ -108,6 +108,11 @@
         <div class="stat-label expense">Expenses</div>
         <div class="stat-value expense" id="total-expense">€0</div>
       </div>
+      <div class="stat income-bg" style="background-color: #fff59d;">
+         <div class="stat-label income">Month Balance</div>
+         <div class="stat-value income" id="balance">€0</div>
+      </div>
+      
     </div>
   
     <div class="target-card">
@@ -310,6 +315,7 @@
   
       document.getElementById('total-income').textContent=fmt(income);
       document.getElementById('total-expense').textContent=fmt(expense);
+      document.getElementById('balance').textContent = '€' +(income - expense)
   
       const saved=Math.max(0,totalSaved());
       const target=data.target||0;
