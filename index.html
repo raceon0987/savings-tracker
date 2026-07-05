@@ -14,12 +14,12 @@
      h2.sr-only{position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0,0,0,0);}
      *{box-sizing:border-box;margin:0;padding:0;}
      .app{font-family:'DM Sans',var(--font-sans),sans-serif;padding:1rem 0;max-width:420px;}
-   
+
      .month-header{display:flex;align-items:center;justify-content:space-between;margin-bottom:1.1rem;}
      .month-nav{background: var(--surface-2);border:0.5px solid var(--border-strong);border-radius:var(--radius);width:34px;height:34px;cursor:pointer;color:var(--text-secondary);font-size:18px;display:flex;align-items:center;justify-content:center;}
      .month-nav:hover{background:var(--surface-1);color:var(--text-primary);}
      .month-title{font-size:17px;font-weight:500;color:var(--text-primary);}
-   
+
      .summary-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:10px;margin-bottom:1rem;}
      .stat{border-radius:12px;padding:0.9rem 1rem;}
      .stat.income-bg{background:#EAF3DE;border:0.5px solid #C0DD97;}
@@ -30,7 +30,7 @@
      .stat-value{font-family:'DM Mono',monospace;font-size:22px;font-weight:500;}
      .stat-value.income{color:#27500A;}
      .stat-value.expense{color:#791F1F;}
-   
+
      .target-card{background:#E6F1FB;border:0.5px solid #B5D4F4;border-radius:12px;padding:1rem 1.1rem;margin-bottom:1rem;}
      .target-top{display:flex;align-items:center;justify-content:space-between;margin-bottom:10px;}
      .target-label{font-size:13px;font-weight:500;color:#185FA5;}
@@ -42,11 +42,11 @@
      .tnum-lbl{font-size:11px;color:#185FA5;margin-top:2px;}
      .progress-track{height:8px;background:#B5D4F4;border-radius:99px;overflow:hidden;}
      .progress-fill{height:100%;border-radius:99px;background:#378ADD;transition:width 0.4s ease;}
-   
+
      .target-input-row{display:flex;gap:8px;margin-bottom:10px;align-items:flex-end;}
      .target-input-row input{flex:1;height:40px;border-radius:var(--radius);border:0.5px solid #85B7EB;background:#fff;color:#0C447C;font-size:15px;padding:0 12px;font-family:'DM Mono',monospace;}
      .target-input-row button{height:40px;padding:0 14px;border-radius:var(--radius);border:none;background:#378ADD;color:#fff;font-size:14px;font-weight:500;cursor:pointer;font-family:'DM Sans',sans-serif;white-space:nowrap;}
-   
+
      .add-form{background:var(--surface-1);border:0.5px solid var(--border);border-radius:12px;padding:1rem;margin-bottom:1.1rem;display:flex;flex-direction:column;gap:9px;}
      .form-row{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:8px;}
      .field{display:flex;flex-direction:column;gap:4px;}
@@ -59,11 +59,11 @@
      .btn-type.active-expense{background:#FCEBEB;color:#791F1F;border-color:#F09595;}
      .btn-add{height:44px;border-radius:var(--radius);border:none;background: #422e53;color:#fff;font-size:15px;font-weight:500;cursor:pointer;font-family:'DM Sans',sans-serif;width:100%;}
      .btn-add:hover{background:#185FA5;}
-   
+
      .tabs{display:flex;gap:4px;margin-bottom:1.1rem;background:var(--surface-1);border-radius:var(--radius);padding:3px;}
      .tab{flex:1;text-align:center;padding:8px;font-size:14px;border-radius:6px;cursor:pointer;color:var(--text-secondary);border:none;background:none;font-family:'DM Sans',sans-serif;}
      .tab.active{background:var(--surface-2);color:var(--text-primary);font-weight:500;border:0.5px solid var(--border);}
-   
+
      .entries{display:flex;flex-direction:column;gap:7px;}
      .entry{background:var(--surface-2);border:0.5px solid var(--border);border-radius:10px;display:flex;align-items:center;gap:10px;padding:11px 12px;}
      .entry-icon{width:34px;height:34px;border-radius:9px;display:flex;align-items:center;justify-content:center;font-size:17px;flex-shrink:0;}
@@ -76,9 +76,9 @@
      .entry-amount.expense{color:#791F1F;}
      .btn-del{width:28px;height:28px;border-radius:8px;border:1.5px solid #fff;background:#fff;color:#000;cursor:pointer;display:flex;align-items:center;justify-content:center;flex-shrink:0;font-size: 8px;font-weight: bold; transition:background 0.15s,color 0.15s,border-color 0.15s;line-height:1;}
      .btn-del:hover{background:#E24B4A;color:#fff;border-color:#E24B4A;}
-   
+
      .empty{text-align:center;padding:2rem 0;color:var(--text-muted);font-size:14px;}
-   
+
      .month-strip{display:flex;flex-direction:column;gap:7px;}
      .month-row{background:var(--surface-2);border:0.5px solid var(--border);border-radius:10px;padding:10px 12px;}
      .month-row-top{display:flex;justify-content:space-between;align-items:center;margin-bottom:6px;}
@@ -98,7 +98,7 @@
       <span class="month-title" id="month-title"></span>
       <button class="month-nav" onclick="changeMonth(1)" aria-label="Next month">▶</button>
     </div>
-  
+
     <div class="summary-grid">
       <div class="stat income-bg">
         <div class="stat-label income">Income</div>
@@ -114,7 +114,7 @@
       </div>
       
     </div>
-  
+
     <div class="target-card">
       <div class="target-top">
         <span class="target-label">Savings target</span>
@@ -144,7 +144,7 @@
         <div class="progress-fill" id="target-bar" style="width:0%"></div>
       </div>
     </div>
-  
+
     <div class="add-form">
       <div class="field">
         <label>Description</label>
@@ -158,7 +158,7 @@
         <div class="field">
           <label>Category</label>
           <select id="cat">
-            <option value="Food">Food & Grocery</option>
+            <option value="Food">Food</option>
             <option value="Housing">Housing</option>
             <option value="Transport">Transport</option>
             <option value="Health">Health</option>
@@ -173,18 +173,18 @@
       </div>
       <button class="btn-add" onclick="addEntry()">Add entry</button>
     </div>
-  
+
     <div class="tabs">
       <button class="tab active" onclick="switchTab('list',this)">Entries</button>
       <button class="tab" onclick="switchTab('months',this)">All months</button>
     </div>
-  
+
     <div id="tab-list">
       <div class="entries" id="entries-list">
         <div class="empty">No entries this month.</div>
       </div>
     </div>
-  
+
     <div id="tab-months" style="display:none;">
       <div class="month-strip" id="month-strip"></div>
     </div>
@@ -201,32 +201,32 @@
   <script>
     const ICONS={Food:'🍽',Housing:'🏠',Transport:'🚗',Health:'💊',Salary:'💼',Other:'📦'};
     const MONTHS=['January','February','March','April','May','June','July','August','September','October','November','December'];
-  
+
     let data={target:0,entries:[]};
     try{const s=localStorage.getItem('exp_v3');if(s)data=JSON.parse(s);}catch(e){}
-  
+
     const now=new Date();
     let viewYear=now.getFullYear();
     let viewMonth=now.getMonth();
     let currentType='income';
-  
+
     function save(){try{localStorage.setItem('exp_v3',JSON.stringify(data));}catch(e){}}
     function fmt(n){return'€'+Math.abs(Math.round(n)).toLocaleString('de-DE');}
     function monthKey(y,m){return y+'-'+String(m+1).padStart(2,'0');}
-  
+
     function changeMonth(d){
       viewMonth+=d;
       if(viewMonth>11){viewMonth=0;viewYear++;}
       if(viewMonth<0){viewMonth=11;viewYear--;}
       render();
     }
-  
+
     function setType(t){
       currentType=t;
       document.getElementById('btn-income').className='btn-type'+(t==='income'?' active-income':'');
       document.getElementById('btn-expense').className='btn-type'+(t==='expense'?' active-expense':'');
     }
-  
+
     function addEntry(){
       const desc=document.getElementById('desc').value.trim();
       const amt=parseFloat(document.getElementById('amount').value);
@@ -237,9 +237,9 @@
       document.getElementById('amount').value='';
       save();render();
     }
-  
+
     function deleteEntry(id){data.entries=data.entries.filter(e=>e.id!==id);save();render();}
-  
+
     function toggleTargetEdit(){
       const el=document.getElementById('target-edit');
       const open=el.style.display==='none';
@@ -247,20 +247,20 @@
       document.getElementById('edit-btn').textContent=open?'Done':'Edit';
       if(open)document.getElementById('target-input').value=data.target||'';
     }
-  
+
     function saveTarget(){
       const v=parseFloat(document.getElementById('target-input').value);
       if(!isNaN(v)&&v>=0){data.target=v;save();render();}
       toggleTargetEdit();
     }
-  
+
     function monthSavings(y,m){
       const es=data.entries.filter(e=>e.year===y&&e.month===m);
       const inc=es.filter(e=>e.type==='income').reduce((s,e)=>s+e.amount,0);
       const exp=es.filter(e=>e.type==='expense').reduce((s,e)=>s+e.amount,0);
       return inc-exp;
     }
-  
+
     function totalSaved(){
       const keys=new Set(data.entries.map(e=>monthKey(e.year,e.month)));
       let total=0;
@@ -274,19 +274,19 @@
     const dataStr = JSON.stringify(data, null, 2);
     const blob = new Blob([dataStr], { type: "application/json" });
     const url = URL.createObjectURL(blob);
-  
+
     const a = document.createElement("a");
     a.href = url;
     a.download = "expense-backup.json";
     a.click();
-  
+
     URL.revokeObjectURL(url);
   }
-  
+
   function importData(event) {
     const file = event.target.files[0];
     if (!file) return;
-  
+
     const reader = new FileReader();
     reader.onload = function(e) {
       try {
@@ -305,29 +305,29 @@
     };
     reader.readAsText(file);
   }
-  
+
     function render(){
       document.getElementById('month-title').textContent=MONTHS[viewMonth]+' '+viewYear;
-  
+
       const curEntries=data.entries.filter(e=>e.year===viewYear&&e.month===viewMonth);
       const income=curEntries.filter(e=>e.type==='income').reduce((s,e)=>s+e.amount,0);
       const expense=curEntries.filter(e=>e.type==='expense').reduce((s,e)=>s+e.amount,0);
-  
+
       document.getElementById('total-income').textContent=fmt(income);
       document.getElementById('total-expense').textContent=fmt(expense);
       document.getElementById('balance').textContent = '€' +(income - expense)
-  
+
       const saved=Math.max(0,totalSaved());
       const target=data.target||0;
       const remaining=Math.max(0,target-saved);
       const pct=target>0?Math.min(100,Math.round((saved/target)*100)):0;
-  
+
       document.getElementById('t-target').textContent=fmt(target);
       document.getElementById('t-saved').textContent=fmt(saved);
       document.getElementById('t-remaining').textContent=remaining===0&&target>0?'✓ Reached!':fmt(remaining);
       document.getElementById('t-remaining').style.color=remaining===0&&target>0?'#27500A':'#A32D2D';
       document.getElementById('target-bar').style.width=pct+'%';
-  
+
       const list=document.getElementById('entries-list');
       if(!curEntries.length){
         list.innerHTML='<div class="empty">No entries for '+MONTHS[viewMonth]+'.</div>';
@@ -344,7 +344,7 @@
           </div>
         `).join('');
       }
-  
+
       const allKeys=[...new Set(data.entries.map(e=>monthKey(e.year,e.month)))].sort().reverse();
       const strip=document.getElementById('month-strip');
       if(!allKeys.length){
@@ -365,7 +365,7 @@
         }).join('');
       }
     }
-  
+
     document.getElementById('desc').addEventListener('keydown',e=>{if(e.key==='Enter')addEntry();});
     document.getElementById('amount').addEventListener('keydown',e=>{if(e.key==='Enter')addEntry();});
     render();
