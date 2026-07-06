@@ -211,7 +211,7 @@
     let currentType='income';
 
     function save(){try{localStorage.setItem('exp_v3',JSON.stringify(data));}catch(e){}}
-    function fmt(n){return'€'+Math.abs(Math.round(n)).toLocaleString('de-DE');}
+    function fmt(n){return(n < 0 ? '-€':'€'  ) + Math.abs(Math.round(n)).toLocaleString('de-DE');}
     function monthKey(y,m){return y+'-'+String(m+1).padStart(2,'0');}
 
     function changeMonth(d){
@@ -315,7 +315,7 @@
 
       document.getElementById('total-income').textContent=fmt(income);
       document.getElementById('total-expense').textContent=fmt(expense);
-      document.getElementById('balance').textContent = Math.round(income - expense)
+      document.getElementById('balance').textContent = fmt(income - expense)
 
       const saved=Math.max(0,totalSaved());
       const target=data.target||0;
